@@ -1,4 +1,4 @@
-# docspot
+# 🎨 docspot
 
 A new Flutter project.
 
