@@ -10,6 +10,6 @@ The main dashboard, or homescreen, will offer real-time notifications, the abili
 
 With a focus on security, the app includes features for password resets, security settings, and logout options. Users can also manage personal information, view test results and diagnostics, and access FAQs for quick help. The app supports multiple languages to cater to a diverse user base.
 
-To run DocSpot locally, ensure Flutter is installed, clone the repository, and use the provided commands to get started. Contributions from the community are welcome.
+To run DocSpot locally, ensure Flutter is installed, clone the repository. Contributions from the community are welcome.
 
 Stay tuned for more updates as I continue to develop and enhance DocSpot!
