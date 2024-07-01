@@ -48,7 +48,7 @@ To run DocSpot locally, ensure Flutter is installed on your machine.
 
 ## Contributing
 
-Contributions from the community are welcome! If you'd like to contribute.
+Contributions from the community are welcome!.
 
 ## Stay Updated
 
