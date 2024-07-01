@@ -2,7 +2,7 @@ Welcome to **DocSpot**, the ultimate doctor appointment scheduling app built wit
 
 ## Features
 
-DocSpot will include the following features as development progresses:
+DocSpot may include the following features or some of them as development progresses:
 
 ### User Management
 - 👤 **Account Creation**: Easy and secure account creation process.
@@ -82,4 +82,4 @@ Stay tuned for more updates as development continues and new features are added 
 
 ---
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by Ahmed Adel Hammad
