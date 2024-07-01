@@ -1,6 +1,3 @@
-```markdown
-# ⚕️ DocSpot
-
 Welcome to **DocSpot**, the ultimate doctor appointment scheduling app built with Flutter. Currently under development, DocSpot aims to provide a seamless experience for users to book and manage their medical appointments effortlessly.
 
 ## Features
@@ -85,5 +82,4 @@ Stay tuned for more updates as development continues and new features are added 
 
 ---
 
-Made with ❤️ by [Ahmed Adel]
-```
+Made with ❤️ by [Your Name]
