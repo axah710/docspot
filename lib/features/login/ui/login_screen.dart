@@ -55,6 +55,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       DocSpotTextFormField(
                         hintText: 'Password',
                         isObscureText: isObSecureText,
+                        // isObscureText: isObSecureText:
+                        // The isObscureText property determines whether the
+                        // text in the input field should be obscured (hidden)
+                        // or visible. The value is controlled by the
+                        //isObSecureText boolean variable.
                         suffixIcon: IconButton(
                           icon: Icon(
                             isObSecureText
@@ -62,6 +67,18 @@ class _LoginScreenState extends State<LoginScreen> {
                                 : Icons.visibility,
                             color: DocSpotColorsManager.darkBlue,
                           ),
+                          // icon: Icon(...):
+                          // The icon property of the IconButton is set to an Icon
+                          //widget. The icon displayed depends on the value of
+                          //isObSecureText:
+                          // If isObSecureText is true, the icon is
+                          // Icons.visibility_off, indicating that the text is
+                          // currently hidden.
+                          // If isObSecureText is false, the icon is
+                          // Icons.visibility, indicating that the text is
+                          // currently visible.
+                          // The color of the icon is set to
+                          // DocSpotColorsManager.darkBlue.
                           onPressed: () {
                             setState(
                               () {
