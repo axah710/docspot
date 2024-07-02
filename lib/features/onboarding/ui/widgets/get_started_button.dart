@@ -20,7 +20,7 @@ class GetStartedButton extends StatelessWidget {
           ),
         ),
         backgroundColor: WidgetStateProperty.all<Color>(
-          AppColorsManager.primaryBlueColor,
+          DocSpotColorsManager.primaryBlueColor,
         ),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         // This property is used to define the size of the tap target for the
@@ -45,7 +45,7 @@ class GetStartedButton extends StatelessWidget {
       },
       child: Text(
         "Get Started",
-        style: AppTextStyles.font16WhiteSemiBold,
+        style: DocSpotTextStyles.font16WhiteSemiBold,
       ),
     );
   }

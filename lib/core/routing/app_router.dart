@@ -3,7 +3,7 @@ import 'package:docspot/features/login/ui/login_screen.dart';
 import 'package:docspot/features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
-class AppRouter {
+class DocSpotRouter {
   Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.onBoardingScreen:

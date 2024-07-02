@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppColorsManager {
+class DocSpotColorsManager {
   static const Color primaryBlueColor = Color(0xFF247CFF);
   static const Color lightBlue = Color(0xFFF4F8FF);
   static const Color darkBlue = Color(0xFF242424);

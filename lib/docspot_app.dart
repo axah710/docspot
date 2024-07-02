@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DocSpotApp extends StatelessWidget {
-  final AppRouter appRouter;
+  final DocSpotRouter appRouter;
   // To make a connection between AppRouter and DocSpotApp...
 
   const DocSpotApp({
@@ -29,7 +29,7 @@ class DocSpotApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'DocSpot',
         theme: ThemeData(
-          primaryColor: AppColorsManager.primaryBlueColor,
+          primaryColor: DocSpotColorsManager.primaryBlueColor,
           scaffoldBackgroundColor: Colors.white,
         ),
         initialRoute: Routes.onBoardingScreen,

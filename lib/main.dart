@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     DocSpotApp(
-      appRouter: AppRouter(),
+      appRouter: DocSpotRouter(),
     ),
   );
 }

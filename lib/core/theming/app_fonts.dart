@@ -3,7 +3,7 @@ import 'package:docspot/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppTextStyles {
+class DocSpotTextStyles {
   static TextStyle font24BlackBold = TextStyle(
     fontSize: 24.sp,
     fontWeight: AppFontWeightHelper.bold,
@@ -13,31 +13,31 @@ class AppTextStyles {
   static TextStyle font32BlueBold = TextStyle(
     fontSize: 32.sp,
     fontWeight: AppFontWeightHelper.bold,
-    color: AppColorsManager.primaryBlueColor,
+    color: DocSpotColorsManager.primaryBlueColor,
   );
 
   static TextStyle font13BlueSemiBold = TextStyle(
     fontSize: 13.sp,
     fontWeight: AppFontWeightHelper.semiBold,
-    color: AppColorsManager.primaryBlueColor,
+    color: DocSpotColorsManager.primaryBlueColor,
   );
 
   static TextStyle font13DarkBlueMedium = TextStyle(
     fontSize: 13.sp,
     fontWeight: AppFontWeightHelper.medium,
-    color: AppColorsManager.darkBlue,
+    color: DocSpotColorsManager.darkBlue,
   );
 
   static TextStyle font13DarkBlueRegular = TextStyle(
     fontSize: 13.sp,
     fontWeight: AppFontWeightHelper.regular,
-    color: AppColorsManager.darkBlue,
+    color: DocSpotColorsManager.darkBlue,
   );
 
   static TextStyle font24BlueBold = TextStyle(
     fontSize: 24.sp,
     fontWeight: AppFontWeightHelper.bold,
-    color: AppColorsManager.primaryBlueColor,
+    color: DocSpotColorsManager.primaryBlueColor,
   );
 
   static TextStyle font16WhiteSemiBold = TextStyle(
@@ -49,61 +49,61 @@ class AppTextStyles {
   static TextStyle font13GrayRegular = TextStyle(
     fontSize: 13.sp,
     fontWeight: AppFontWeightHelper.regular,
-    color: AppColorsManager.gray,
+    color: DocSpotColorsManager.gray,
   );
 
   static TextStyle font12GrayRegular = TextStyle(
     fontSize: 12.sp,
     fontWeight: AppFontWeightHelper.regular,
-    color: AppColorsManager.gray,
+    color: DocSpotColorsManager.gray,
   );
 
   static TextStyle font12GrayMedium = TextStyle(
     fontSize: 12.sp,
     fontWeight: AppFontWeightHelper.medium,
-    color: AppColorsManager.gray,
+    color: DocSpotColorsManager.gray,
   );
 
   static TextStyle font12DarkBlueRegular = TextStyle(
     fontSize: 12.sp,
     fontWeight: AppFontWeightHelper.regular,
-    color: AppColorsManager.darkBlue,
+    color: DocSpotColorsManager.darkBlue,
   );
 
   static TextStyle font12BlueRegular = TextStyle(
     fontSize: 12.sp,
     fontWeight: AppFontWeightHelper.regular,
-    color: AppColorsManager.primaryBlueColor,
+    color: DocSpotColorsManager.primaryBlueColor,
   );
 
   static TextStyle font13BlueRegular = TextStyle(
     fontSize: 13.sp,
     fontWeight: AppFontWeightHelper.regular,
-    color: AppColorsManager.primaryBlueColor,
+    color: DocSpotColorsManager.primaryBlueColor,
   );
 
   static TextStyle font14GrayRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: AppFontWeightHelper.regular,
-    color: AppColorsManager.gray,
+    color: DocSpotColorsManager.gray,
   );
 
   static TextStyle font14LightGrayRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: AppFontWeightHelper.regular,
-    color: AppColorsManager.lightGray,
+    color: DocSpotColorsManager.lightGray,
   );
 
   static TextStyle font14DarkBlueMedium = TextStyle(
     fontSize: 14.sp,
     fontWeight: AppFontWeightHelper.medium,
-    color: AppColorsManager.darkBlue,
+    color: DocSpotColorsManager.darkBlue,
   );
 
   static TextStyle font14DarkBlueBold = TextStyle(
     fontSize: 14.sp,
     fontWeight: AppFontWeightHelper.bold,
-    color: AppColorsManager.darkBlue,
+    color: DocSpotColorsManager.darkBlue,
   );
 
   static TextStyle font16WhiteMedium = TextStyle(
@@ -115,25 +115,25 @@ class AppTextStyles {
   static TextStyle font14BlueSemiBold = TextStyle(
     fontSize: 14.sp,
     fontWeight: AppFontWeightHelper.semiBold,
-    color: AppColorsManager.primaryBlueColor,
+    color: DocSpotColorsManager.primaryBlueColor,
   );
 
   static TextStyle font15DarkBlueMedium = TextStyle(
     fontSize: 15.sp,
     fontWeight: AppFontWeightHelper.medium,
-    color: AppColorsManager.darkBlue,
+    color: DocSpotColorsManager.darkBlue,
   );
 
   static TextStyle font18DarkBlueBold = TextStyle(
     fontSize: 18.sp,
     fontWeight: AppFontWeightHelper.bold,
-    color: AppColorsManager.darkBlue,
+    color: DocSpotColorsManager.darkBlue,
   );
 
   static TextStyle font18DarkBlueSemiBold = TextStyle(
     fontSize: 18.sp,
     fontWeight: AppFontWeightHelper.semiBold,
-    color: AppColorsManager.darkBlue,
+    color: DocSpotColorsManager.darkBlue,
   );
 
   static TextStyle font18WhiteMedium = TextStyle(
