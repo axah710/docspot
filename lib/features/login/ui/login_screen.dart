@@ -2,6 +2,8 @@ import 'package:docspot/core/helpers/spacing.dart';
 import 'package:docspot/core/theming/app_colors.dart';
 import 'package:docspot/core/theming/app_fonts.dart';
 import 'package:docspot/core/widgets/app_text_button.dart';
+import 'package:docspot/core/widgets/build_divider.dart';
+import 'package:docspot/core/widgets/svg_displayer.dart';
 import 'package:docspot/core/widgets/text_form_field.dart';
 import 'package:docspot/features/login/ui/widgets/dont_have_account_text.dart';
 import 'package:docspot/features/login/ui/widgets/terms_and_conditions_text.dart';
@@ -83,7 +85,41 @@ class _LoginScreenState extends State<LoginScreen> {
                         textStyle: DocSpotTextStyles.font16WhiteSemiBold,
                         onPressed: () {},
                       ),
-                      verticalSpace(16),
+                      verticalSpace(46),
+                      Row(
+                        children: [
+                          const BuildDivider(),
+                          Align(
+                            alignment: AlignmentDirectional.center,
+                            child: Text(
+                              "Or Sign In With",
+                              style: DocSpotTextStyles.font12stoneyGreyRegular,
+                            ),
+                          ),
+                          const BuildDivider(),
+                        ],
+                      ),
+                      verticalSpace(32),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const SvgDisplayer(
+                            assetName:
+                                "assets/svgs/google_login_alternative.svg",
+                          ),
+                          horizontalSpace(32),
+                          const SvgDisplayer(
+                            assetName:
+                                "assets/svgs/facebook_login_alternative.svg",
+                          ),
+                          horizontalSpace(32),
+                          const SvgDisplayer(
+                            assetName:
+                                "assets/svgs/apple_login_alternative.svg",
+                          ),
+                        ],
+                      ),
+                      verticalSpace(32),
                       const TermsAndConditionsText(),
                       verticalSpace(60),
                       const DontHaveAccountText()

@@ -9,6 +9,11 @@ class DocSpotTextStyles {
     fontWeight: AppFontWeightHelper.bold,
     color: Colors.black,
   );
+  static TextStyle font12stoneyGreyRegular = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: AppFontWeightHelper.regular,
+    color: DocSpotColorsManager.stoneyGrey,
+  );
 
   static TextStyle font32BlueBold = TextStyle(
     fontSize: 32.sp,

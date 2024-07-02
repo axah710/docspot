@@ -9,6 +9,8 @@ class DocSpotColorsManager {
   static const Color lighterGray = Color(0xFFEDEDED);
   static const Color moreLightGray = Color(0xFFFDFDFF);
   static const Color moreLighterGray = Color(0xFFF5F5F5);
+    static const Color greyLight  = Color(0xFFE0E0E0);
+        static const Color stoneyGrey = Color(0xFF9E9E9E);
 }
 // Defines a class AppColorsManager with static constant Color variables 
 //representing different color values.

@@ -1,7 +1,7 @@
 import 'package:docspot/core/theming/app_fonts.dart';
+import 'package:docspot/core/widgets/svg_displayer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class DocImageAndText extends StatelessWidget {
   const DocImageAndText({super.key});
@@ -10,9 +10,10 @@ class DocImageAndText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SvgPicture.asset(
-          "assets/svgs/docspot_logo_low_opacity.svg",
+        const SvgDisplayer(
+          assetName: "assets/svgs/docspot_logo_low_opacity.svg",
         ),
+      
         Container(
           foregroundDecoration: BoxDecoration(
             gradient: LinearGradient(
