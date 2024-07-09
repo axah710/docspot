@@ -1,7 +1,10 @@
+import 'package:docspot/core/DI/service_locator.dart';
 import 'package:docspot/core/routing/routes.dart';
+import 'package:docspot/features/login/logic/login_cubit/login_cubit.dart';
 import 'package:docspot/features/login/ui/login_screen.dart';
 import 'package:docspot/features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DocSpotRouter {
   Route generateRoute(RouteSettings settings) {
@@ -12,7 +15,15 @@ class DocSpotRouter {
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (context) => const LoginScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<LoginCubit>(),
+            // getIt<LoginCubit>() is a function call to a service locator
+            // (typically get_it package) that retrieves an instance of LoginCubit.
+            // Service Locator Setup: To use getIt, you need to set up the service
+            // locator in your application. This involves registering your
+            // LoginCubit and other dependencies with getIt.
+            child: const LoginScreen(),
+          ),
         );
       default:
         return MaterialPageRoute(
