@@ -1,8 +1,6 @@
 import 'package:docspot/core/helpers/spacing.dart';
-import 'package:docspot/core/theming/app_colors.dart';
-import 'package:docspot/core/theming/app_fonts.dart';
+import 'package:docspot/features/login/ui/widgets/build_validation_row.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PasswordValidations extends StatelessWidget {
   final bool hasLowercaseLetter;
@@ -50,28 +48,4 @@ class PasswordValidations extends StatelessWidget {
       ],
     );
   }
-}
-
-Widget buildValidationRow(String text, bool hasValidated) {
-  return Row(
-    children: [
-      CircleAvatar(
-        radius: 2.5.r,
-        backgroundColor: DocSpotColorsManager.gray,
-      ),
-      horizontalSpace(6),
-      Text(
-        text,
-        style: DocSpotTextStyles.font13DarkBlueRegular.copyWith(
-          decoration:
-              hasValidated ? TextDecoration.lineThrough : TextDecoration.none,
-          decorationColor: DocSpotColorsManager.green,
-          decorationThickness: 2,
-          color: hasValidated
-              ? DocSpotColorsManager.gray
-              : DocSpotColorsManager.darkBlue,
-        ),
-      ),
-    ],
-  );
 }

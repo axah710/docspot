@@ -4,7 +4,7 @@ import 'package:docspot/core/widgets/app_text_button.dart';
 import 'package:docspot/core/widgets/build_divider.dart';
 import 'package:docspot/core/widgets/svg_displayer.dart';
 import 'package:docspot/features/login/ui/widgets/dont_have_account_text.dart';
-import 'package:docspot/features/login/ui/widgets/email_and_password.dart';
+import 'package:docspot/features/login/ui/widgets/email_and_password_form.dart';
 import 'package:docspot/features/login/ui/widgets/login_bloc_listner.dart';
 import 'package:docspot/features/login/ui/widgets/terms_and_conditions_text.dart';
 import 'package:docspot/features/login/ui/widgets/validate_then_login.dart';
@@ -39,7 +39,8 @@ class LoginScreen extends StatelessWidget {
                 verticalSpace(36),
                 Column(
                   children: [
-                    const EmailAndPassword(),
+                    const EmailAndPasswordForm(),
+                    // A custom widget for the email and password form.
                     verticalSpace(24),
                     Align(
                       alignment: AlignmentDirectional.centerEnd,
@@ -53,13 +54,15 @@ class LoginScreen extends StatelessWidget {
                       buttonText: "Login",
                       textStyle: DocSpotTextStyles.font16WhiteSemiBold,
                       onPressed: () {
-                        validateThenTakeLogin(context);
+                        validateThenDoLogin(context);
+                        // Do the validation by validating the form.
                       },
                     ),
                     verticalSpace(46),
                     Row(
                       children: [
                         const BuildDivider(),
+                        // A custom widget to display a divider.
                         Align(
                           alignment: AlignmentDirectional.center,
                           child: Text(
@@ -77,6 +80,7 @@ class LoginScreen extends StatelessWidget {
                         const SvgDisplayer(
                           assetName: "assets/svgs/google_login_alternative.svg",
                         ),
+                        // Displays a Google login SVG icon.
                         horizontalSpace(32),
                         const SvgDisplayer(
                           assetName:
@@ -93,6 +97,8 @@ class LoginScreen extends StatelessWidget {
                     verticalSpace(60),
                     const DontHaveAccountText(),
                     const LoginBlocListner(),
+                    // A custom widget to listen for login-related events and
+                    //update the UI accordingly.
                   ],
                 ),
               ],

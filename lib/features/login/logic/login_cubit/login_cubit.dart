@@ -13,6 +13,10 @@ class LoginCubit extends Cubit<LoginState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  // emailController and passwordController: Instances of TextEditingController
+  // to manage the text input for email and password fields.
+  // formKey: A key to uniquely identify the form and access its state.
+  // why did i use them here ? to make less login in UI also to be reusable...
 
   void emitLoginStates(LoginRequestBody loginRequestBody) async {
     // Defines an asynchronous method emitLoginStates that takes a

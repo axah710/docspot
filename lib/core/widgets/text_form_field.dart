@@ -42,72 +42,81 @@ class DocSpotTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      // controller manages the text being edited.
+
       validator: (value) {
         return validator(value);
+        // validator is a function that checks if the text input is valid and
+        // returns an error message if it isn't.
       },
-      decoration: InputDecoration(
-          // The InputDecoration object customizes the appearance of the TextFormField
-          isDense: true,
-          // isDense: true: Reduces the height of the text field.
-          contentPadding: contentPadding ??
-              // contentPadding: Uses the provided contentPadding or defaults to
-              // horizontal and vertical padding values.
-              EdgeInsets.symmetric(
-                horizontal: 23.0.w,
-                vertical: 16.0.h,
-              ),
-          focusedBorder: focusedBorder ??
-              // focusedBorder: Uses the provided focusedBorder or defaults to an
-              //OutlineInputBorder with a specific color and width.
-              OutlineInputBorder(
-                borderRadius: BorderRadius.circular(
-                  16.r,
-                ),
-                borderSide: BorderSide(
-                  color: DocSpotColorsManager.primaryBlueColor,
-                  width: 1.3.w,
-                ),
-              ),
-          enabledBorder: OutlineInputBorder(
-            // enabledBorder: Defines the border when the text field is not focused,
-            // using a lighter gray color.
-            borderRadius: BorderRadius.circular(
-              16.r,
-            ),
-            borderSide: BorderSide(
-              color: DocSpotColorsManager.lighterGray,
-              width: 1.3.w,
-            ),
-          ),
-          hintStyle: hintStyle ?? DocSpotTextStyles.font14LightGrayRegular,
-          // hintStyle: Uses the provided hintStyle or defaults to a predefined text style.
-          hintText: hintText,
-          // hintText: Displays the provided hint text.
-          suffixIcon: suffixIcon,
-          // suffixIcon: Displays the provided suffix icon, if any.
 
-          fillColor: fillColor ?? DocSpotColorsManager.moreLightGray,
-          // fillColor: Uses the provided fillColor or defaults to a light gray color.
-          filled: true,
-          // filled: true: Ensures the text field is filled with the background color.
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(
-              16.r,
+      decoration: InputDecoration(
+        // The InputDecoration object customizes the appearance of the TextFormField
+        isDense: true,
+        // isDense: true: Reduces the height of the text field.
+        contentPadding: contentPadding ??
+            // contentPadding: Uses the provided contentPadding or defaults to
+            // horizontal and vertical padding values.
+            EdgeInsets.symmetric(
+              horizontal: 23.0.w,
+              vertical: 16.0.h,
             ),
-            borderSide: BorderSide(
-              color: DocSpotColorsManager.red,
-              width: 1.3.w,
+        focusedBorder: focusedBorder ??
+            // focusedBorder: Uses the provided focusedBorder or defaults to an
+            //OutlineInputBorder with a specific color and width.
+            OutlineInputBorder(
+              borderRadius: BorderRadius.circular(
+                16.r,
+              ),
+              borderSide: BorderSide(
+                color: DocSpotColorsManager.primaryBlueColor,
+                width: 1.3.w,
+              ),
             ),
+        enabledBorder: OutlineInputBorder(
+          // enabledBorder: Defines the border when the text field is not focused,
+          // using a lighter gray color.
+          borderRadius: BorderRadius.circular(
+            16.r,
           ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(
-              16.r,
-            ),
-            borderSide: BorderSide(
-              color: DocSpotColorsManager.red,
-              width: 1.3.w,
-            ),
-          )),
+          borderSide: BorderSide(
+            color: DocSpotColorsManager.lighterGray,
+            width: 1.3.w,
+          ),
+        ),
+        hintStyle: hintStyle ?? DocSpotTextStyles.font14LightGrayRegular,
+        // hintStyle: Uses the provided hintStyle or defaults to a predefined text style.
+        hintText: hintText,
+        // hintText: Displays the provided hint text.
+        suffixIcon: suffixIcon,
+        // suffixIcon: Displays the provided suffix icon, if any.
+
+        fillColor: fillColor ?? DocSpotColorsManager.moreLightGray,
+        // fillColor: Uses the provided fillColor or defaults to a light gray color.
+        filled: true,
+        // filled: true: Ensures the text field is filled with the background color.
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(
+            16.r,
+          ),
+          borderSide: BorderSide(
+            color: DocSpotColorsManager.red,
+            width: 1.3.w,
+          ),
+        ),
+        // errorBorder set the border styles when there is a validation error.
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(
+            16.r,
+          ),
+          borderSide: BorderSide(
+            color: DocSpotColorsManager.red,
+            width: 1.3.w,
+          ),
+        ),
+        // focusedErrorBorder set the border styles when there is a validation
+        // error.
+      ),
       cursorColor: DocSpotColorsManager.primaryBlueColor,
       // cursorColor: Sets the color of the cursor to the primary blue color.
       obscureText: isObscureText ?? false,
