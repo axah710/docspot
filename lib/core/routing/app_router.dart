@@ -1,4 +1,4 @@
-import 'package:docspot/core/DI/service_locator.dart';
+import 'package:docspot/core/di/service_locator.dart';
 import 'package:docspot/core/routing/routes.dart';
 import 'package:docspot/features/home_screen/ui/screens/home_screen.dart';
 import 'package:docspot/features/login/logic/login_cubit/login_cubit.dart';
