@@ -1,6 +1,7 @@
 import 'package:docspot/features/login/data/models/login_request_body.dart';
 import 'package:docspot/features/login/data/repos/login_repo.dart';
 import 'package:docspot/features/login/logic/login_cubit/login_state.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginCubit extends Cubit<LoginState> {
@@ -9,6 +10,10 @@ class LoginCubit extends Cubit<LoginState> {
   // LoginRepo.
 
   LoginCubit(this._loginRepo) : super(const LoginState.initial());
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+
   void emitLoginStates(LoginRequestBody loginRequestBody) async {
     // Defines an asynchronous method emitLoginStates that takes a
     // LoginRequestBody object as a parameter.

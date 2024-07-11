@@ -1,5 +1,6 @@
 import 'package:docspot/core/DI/service_locator.dart';
 import 'package:docspot/core/routing/routes.dart';
+import 'package:docspot/features/home_screen/ui/screens/home_screen.dart';
 import 'package:docspot/features/login/logic/login_cubit/login_cubit.dart';
 import 'package:docspot/features/login/ui/login_screen.dart';
 import 'package:docspot/features/onboarding/ui/onboarding_screen.dart';
@@ -24,6 +25,10 @@ class DocSpotRouter {
             // LoginCubit and other dependencies with getIt.
             child: const LoginScreen(),
           ),
+        );
+        case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
         );
       default:
         return MaterialPageRoute(
