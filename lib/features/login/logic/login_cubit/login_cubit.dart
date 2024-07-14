@@ -18,11 +18,21 @@ class LoginCubit extends Cubit<LoginState> {
   // formKey: A key to uniquely identify the form and access its state.
   // why did i use them here ? to make less login in UI also to be reusable...
 
-  void emitLoginStates(LoginRequestBody loginRequestBody) async {
+  void emitLoginStates() async {
     // Defines an asynchronous method emitLoginStates that takes a
     // LoginRequestBody object as a parameter.
     emit(const LoginState.loading());
-    final response = await _loginRepo.loginRepo(loginRequestBody);
+    final response = await _loginRepo.loginRepo(
+      LoginRequestBody(
+        email: emailController.text,
+        password: passwordController.text,
+      ),
+    );
+
+    // final response = await _loginRepo.loginRepo(: Awaits the response
+    // from the loginRepo method in the _loginRepo object, passing a
+    // LoginRequestBody with the email and password from the controllers.
+
     // Awaits the response from the loginRepo method in the _loginRepo object
     // using the provided loginRequestBody.
     response.when(

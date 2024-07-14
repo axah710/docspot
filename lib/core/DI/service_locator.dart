@@ -3,6 +3,8 @@ import 'package:docspot/core/networking/api_service.dart';
 import 'package:docspot/core/networking/dio_factory.dart';
 import 'package:docspot/features/login/data/repos/login_repo.dart';
 import 'package:docspot/features/login/logic/login_cubit/login_cubit.dart';
+import 'package:docspot/features/signup/data/repo/signup_repo.dart';
+import 'package:docspot/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
@@ -28,7 +30,7 @@ Future<void> setupGetIt() async {
   );
   // This registers LoginRepo as a lazy singleton. It is initialized with an
   // instance of ApiService, which is retrieved from GetIt.
-  getIt.registerLazySingleton<LoginCubit>(
+  getIt.registerFactory<LoginCubit>(
     () => LoginCubit(
       getIt(),
     ),
@@ -36,6 +38,25 @@ Future<void> setupGetIt() async {
   // This registers LoginCubit as a lazy singleton. It is initialized with an
   // instance of LoginRepo, which is retrieved from GetIt.
   // LoginCubit depends on LoginRepo, so we need to register LoginRepo first.
+
+  // Signup Cubit & Repo
+  getIt.registerLazySingleton<SignupRepo>(
+    () => SignupRepo(
+      getIt(),
+    ),
+  );
+  // getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));:
+  // Registers SignupRepo as a lazy singleton. It is initialized with an
+  // instance of ApiService, which is retrieved from GetIt.
+  getIt.registerFactory<SignupCubit>(
+    () => SignupCubit(
+      getIt(),
+    ),
+  );
+  // getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));:
+  // Registers SignupCubit as a factory. A new instance of SignupCubit will
+  // be created every time it is requested. It is initialized with an instance
+  // of SignupRepo, which is retrieved from GetIt.
 }
 // This function is asynchronous and will be used to configure the service
 // locator by registering various services and dependencies.

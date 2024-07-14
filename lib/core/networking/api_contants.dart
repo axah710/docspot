@@ -1,8 +1,10 @@
 class ApiConstants {
   static const String apiBaseUrl = "https://vcare.integration25.com/api/";
   static const String loginUrl = "auth/login";
+  static const String signupUrl = "auth/register";
 }
-// ApiConstants class contains static constant strings for API base URL and login URL.
+// ApiConstants class contains static constant strings for API base URL and
+// login URL and signup URL.
 
 class ApiErrors {
   static const String badRequestError = "badRequestError";

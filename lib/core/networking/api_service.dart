@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:docspot/core/networking/api_contants.dart';
 import 'package:docspot/features/login/data/models/login_request_body.dart';
 import 'package:docspot/features/login/data/models/login_response.dart';
+import 'package:docspot/features/signup/data/models/signup_request_body.dart';
+import 'package:docspot/features/signup/data/models/signup_response.dart';
 import 'package:retrofit/http.dart';
 part "api_service.g.dart";
 
@@ -30,10 +32,19 @@ abstract class ApiService {
   // a POST request to the URL defined by ApiConstants.loginUrl.
   Future<LoginResponse> login(@Body() LoginRequestBody loginRequestBody);
   // Future<LoginResponse> login(@Body() LoginRequestBody loginRequestBody);:
-  //Method declaration for the login request. It takes a LoginRequestBody
-  //object as the request body and returns a Future<LoginResponse>.
+  // Method declaration for the login request. It takes a LoginRequestBody
+  // object as the request body and returns a Future<LoginResponse>.
   // The @Body() annotation tells Retrofit to use loginRequestBody as the body
   // of the POST request.
+  @POST(ApiConstants.signupUrl)
+  Future<SignupResponse> signup(@Body() SignupRequestBody signupRequestBody);
+  // @POST(ApiConstants.signupUrl): Annotation specifying that this method
+  // makes a POST request to the URL defined by ApiConstants.signupUrl.
+  // Future<SignupResponse> signup(@Body() SignupRequestBody signupRequestBody);:
+  // Method declaration for the signup request. It takes a SignupRequestBody
+  // object as the request body and returns a Future<SignupResponse>. The
+  // @Body() annotation tells Retrofit to use signupRequestBody as the body of
+  // the POST request.
 }
 // This Dart code snippet defines an abstract class ApiService using the
 //retrofit package for making HTTP requests. It specifies a base URL using
