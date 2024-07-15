@@ -12,7 +12,9 @@ void main() async {
   //ensuring that your services are easily accessible and manageable throughout
   // your application.
   await ScreenUtil.ensureScreenSize();
-  //
+  // This line ensures that the screen size is correctly set up, which is
+  // important for responsive design also solve the ScreenUtil
+  // problem in realse mode .
 
   runApp(
     DocSpotApp(
