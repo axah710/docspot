@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "485574926364",
+    "project_id": "doc-spot-a9142",
+    "storage_bucket": "doc-spot-a9142.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485574926364:android:7bba1c78bbd04ad4f6bfd9",
+        "android_client_info": {
+          "package_name": "com.example.docspot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2OIClQUAIKw-WJP2z_5LHM3z1dyDoE7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
