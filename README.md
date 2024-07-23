@@ -119,6 +119,7 @@ The sign-in screen allows users to access their accounts securely. Features incl
 - **Password Input**: Secure password field with visibility toggle.
 - **Forgot Password**: Option to reset password if forgotten.
 - **Sign In Button**: Authenticate and enter the app.
+- **Alternative Signin**: Signin using Google, Apple , and Facebook.
 
 
 ### Sign Up
@@ -129,6 +130,7 @@ The sign-in screen allows users to access their accounts securely. Features incl
 The sign-up screen facilitates new user registration. Features include:
 
 - **Full Name Input**: Enter your full name.
+- **Phone Number**: Enter Valid Phone Number.
 - **Email Input**: Provide a valid email address.
 - **Password Input**: Create a secure password.
 - **Confirm Password Input**: Re-enter the password for confirmation.
