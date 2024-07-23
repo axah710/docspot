@@ -90,6 +90,51 @@ DocSpot may include the following features or some of them as development progre
 ### Doctor Network Expansion
 - 🌍 **Aim to onboard 1,000 doctors across various specialties in the first year**, enhancing the app’s value proposition for users.
 
+  
+## Splash Screen
+
+### Splash Screen
+
+![Screenshot_20240723-184235](https://github.com/user-attachments/assets/22ade276-5ad7-48f4-8244-37a485fa2572)
+
+
+The splash screen provides a welcoming and professional introduction to the app, setting the tone for the user experience. It displays the DocSpot logo and an engaging tagline to capture user interest.
+
+
+## Onboarding Screen
+
+![Screenshot_20240723-184237](https://github.com/user-attachments/assets/40661ca8-aa77-4eaa-aa37-f0a390598d45)
+
+
+## Sign In & Sign Up
+
+### Sign In
+
+![Screenshot_20240723-184241](https://github.com/user-attachments/assets/8cf5110c-d74a-49fb-bdb2-d233c9a62939)
+
+
+The sign-in screen allows users to access their accounts securely. Features include:
+
+- **Email/Username Input**: Enter your registered email or username.
+- **Password Input**: Secure password field with visibility toggle.
+- **Forgot Password**: Option to reset password if forgotten.
+- **Sign In Button**: Authenticate and enter the app.
+
+
+### Sign Up
+
+![Screenshot_20240723-184253](https://github.com/user-attachments/assets/efd1d848-b108-411b-beae-247d01752ff9)
+
+
+The sign-up screen facilitates new user registration. Features include:
+
+- **Full Name Input**: Enter your full name.
+- **Email Input**: Provide a valid email address.
+- **Password Input**: Create a secure password.
+- **Confirm Password Input**: Re-enter the password for confirmation.
+- **Sign Up Button**: Complete the registration process.
+
+  
 ## Installation
 
 To run DocSpot locally, ensure Flutter is installed on your machine. 
