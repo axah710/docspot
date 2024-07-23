@@ -98,7 +98,7 @@ DocSpot may include the following features or some of them as development progre
 ![Screenshot_20240723-184235](https://github.com/user-attachments/assets/22ade276-5ad7-48f4-8244-37a485fa2572)
 
 
-The splash screen provides a welcoming and professional introduction to the app, setting the tone for the user experience. It displays the DocSpot logo and an engaging tagline to capture user interest.
+The splash screen provides a welcoming and professional introduction to the app, setting the tone for the user experience. It displays the DocSpot logo to capture user interest.
 
 
 ## Onboarding Screen
