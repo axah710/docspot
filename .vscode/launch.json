@@ -1,20 +1,20 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "DocSpot Development",
-        "request": "launch",
-        "type": "dart",
-        "program": "lib/main_development.dart",
-        "args": ["--flavor", "Development", "--target", "lib/main_development.dart" ]
-      },
-      {
-        "name": "DocSpot Production",
-        "request": "launch",
-        "type": "dart",
-        "program": "lib/main_production.dart",
-        "args": ["--flavor", "Prouction", "--target", "lib/main_production.dart" ]
-      }
-    ],
-    "compounds": []
-  }
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "DocSpot Development",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_development.dart",
+      "args": ["--flavor", "development", "--target", "lib/main_development.dart"]
+    },
+    {
+      "name": "DocSpot Production",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_production.dart",
+      "args": ["--flavor", "production", "--target", "lib/main_production.dart"]
+    }
+  ],
+  "compounds": []
+}
