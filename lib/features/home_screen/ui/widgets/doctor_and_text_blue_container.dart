@@ -28,7 +28,7 @@ class DoctorAndTextBlueContainer extends StatelessWidget {
               vertical: 16.h,
             ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(24.0.r),
+              borderRadius: BorderRadius.circular(24.r),
               image: const DecorationImage(
                 // Adds a background image to the container.
                 image: AssetImage('assets/images/home_blue_pattern.png'),
@@ -53,7 +53,7 @@ class DoctorAndTextBlueContainer extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(48.0.r),
+                        borderRadius: BorderRadius.circular(48.r),
                       ),
                     ),
                     child: Text(
