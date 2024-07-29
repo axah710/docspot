@@ -15,6 +15,7 @@ void main() async {
   // This line ensures that the screen size is correctly set up, which is
   // important for responsive design also solve the ScreenUtil
   // problem in realse mode .
+    // debugPaintSizeEnabled = true;
   runApp(
     DocSpotApp(
       appRouter: DocSpotRouter(),

@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_fonts.dart';
 
-class DoctorAndTextBlueContainer extends StatelessWidget {
-  const DoctorAndTextBlueContainer({super.key});
+class DoctorAndTextBlueStack extends StatelessWidget {
+  const DoctorAndTextBlueStack({super.key});
 
   @override
   Widget build(BuildContext context) {

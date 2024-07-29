@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../widgets/doctor_and_text_blue_container.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../widgets/doctor_and_text_blue_stack.dart';
+import '../widgets/doctor_speciality_see_all.dart';
+import '../widgets/doctor_spiciality_list_view.dart';
+import '../widgets/doctors_list_view.dart';
 import '../widgets/home_top_name_and_notifications_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,11 +24,17 @@ class HomeScreen extends StatelessWidget {
             28.w,
             28.h,
           ),
-          child: const Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HomeTopNameAndNotificationsBar(),
-              DoctorAndTextBlueContainer(),
+              const HomeTopNameAndNotificationsBar(),
+              const DoctorAndTextBlueStack(),
+              verticalSpace(24),
+              const DoctorSpecialitySeeAll(),
+              verticalSpace(18),
+              const DoctorSpicialityListView(),
+              verticalSpace(8),
+              const DoctorsListView(),
             ],
           ),
         ),

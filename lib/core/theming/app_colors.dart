@@ -13,6 +13,7 @@ class DocSpotColorsManager {
   static const Color stoneyGrey = Color(0xFF9E9E9E);
   static const Color red = Colors.red;
   static const Color green = Colors.green;
+
 }
 // Defines a class AppColorsManager with static constant Color variables 
 //representing different color values.
