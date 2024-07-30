@@ -1,6 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
+import '../constants/constants.dart';
+import '../helpers/shared_preferences_helper.dart';
+
 class DioFactory {
   /// private constructor as I don't want to allow creating an instance of this class
   DioFactory._();
@@ -38,8 +41,10 @@ class DioFactory {
       // dio!.options.receiveTimeout = timeOut: Sets the receive timeout for
       //the Dio instance.
 
-      // addDioHeaders();
+      addDioHeaders();
+      // addDioHeaders: Adds default headers to the Dio instance.
       addDioInterceptor();
+      // addDioInterceptor: Adds an interceptor to log request and response details.
       return dio!;
       // return dio!;: Returns the initialized Dio instance.
     } else {
@@ -49,19 +54,19 @@ class DioFactory {
     }
   }
 
-  // static void addDioHeaders() async {
-  //   dio?.options.headers = {
-  //     'Accept': 'application/json',
-  //     'Authorization':
-  //         'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
-  //   };
-  // }
+  static void addDioHeaders() async {
+    dio?.options.headers = {
+      'Accept': 'application/json',
+      'Authorization':
+          'Bearer ${await SharedPreferencesfHelper.getSecuredString(SharedPreferencesfKeys.userToken)}',
+    };
+  }
 
-  // static void setTokenIntoHeaderAfterLogin(String token) {
-  //   dio?.options.headers = {
-  //     'Authorization': 'Bearer $token',
-  //   };
-  // }
+  static void setTokenIntoHeaderAfterLogin(String token) {
+    dio?.options.headers = {
+      'Authorization': 'Bearer $token',
+    };
+  }
   // show how you could add headers to the Dio instance:
 // addDioHeaders: Adds default headers, including an authorization token fetched from shared preferences.
 // setTokenIntoHeaderAfterLogin: Sets the authorization header after logging in.

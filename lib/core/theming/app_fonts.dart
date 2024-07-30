@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DocSpotTextStyles {
-  static TextStyle font24BlackBold = TextStyle(
+  static  TextStyle font24BlackBold = TextStyle(
     fontSize: 24.sp,
     fontWeight: AppFontWeightHelper.bold,
     color: Colors.black,
   );
-  static TextStyle font12stoneyGreyRegular = TextStyle(
+  static  TextStyle font12stoneyGreyRegular = TextStyle(
     fontSize: 12.sp,
     fontWeight: AppFontWeightHelper.regular,
     color: DocSpotColorsManager.stoneyGrey,

@@ -5,6 +5,8 @@ import 'package:docspot/features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/constants/constants.dart';
+
 class DocSpotApp extends StatelessWidget {
   final DocSpotRouter appRouter;
   // To make a connection between AppRouter and DocSpotApp...
@@ -32,7 +34,7 @@ class DocSpotApp extends StatelessWidget {
           primaryColor: DocSpotColorsManager.primaryBlueColor,
           scaffoldBackgroundColor: Colors.white,
         ),
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
         onGenerateRoute: appRouter.generateRoute,
         home: const OnBoardingScreen(),
       ),

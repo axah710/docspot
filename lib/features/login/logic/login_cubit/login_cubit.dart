@@ -4,6 +4,10 @@ import 'package:docspot/features/login/logic/login_cubit/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/constants/constants.dart';
+import '../../../../core/helpers/shared_preferences_helper.dart';
+import '../../../../core/networking/dio_factory.dart';
+
 class LoginCubit extends Cubit<LoginState> {
   final LoginRepo _loginRepo;
   // final LoginRepo _loginRepo;: Declares a final variable _loginRepo of type
@@ -48,7 +52,8 @@ class LoginCubit extends Cubit<LoginState> {
           ),
         );
       },
-      sucess: (loginResponse) {
+      sucess: (loginResponse) async {
+        await saveUserToken(loginResponse.userData.token);
         emit(
           LoginState.success(loginResponse),
         );
@@ -56,4 +61,10 @@ class LoginCubit extends Cubit<LoginState> {
     );
     //
   }
+}
+
+Future<void> saveUserToken(String token) async {
+  await SharedPreferencesfHelper.setSecuredString(
+      SharedPreferencesfKeys.userToken, token);
+  DioFactory.setTokenIntoHeaderAfterLogin(token);
 }
