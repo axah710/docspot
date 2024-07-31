@@ -54,22 +54,32 @@ class DioFactory {
     }
   }
 
+  ///Sets default headers for the Dio instance.
   static void addDioHeaders() async {
     dio?.options.headers = {
       'Accept': 'application/json',
       'Authorization':
           'Bearer ${await SharedPreferencesfHelper.getSecuredString(SharedPreferencesfKeys.userToken)}',
     };
+    // Purpose:
+    // Sets default headers for the Dio instance, including:
+    // Accept Header: Indicates that the client expects JSON responses.
+    // Authorization Header: Adds an authorization token fetched from
+    // FlutterSecureStorage using SharedPreferencesfHelper. The token is used to
+    // authenticate requests.
   }
 
+  /// Updates the Authorization header with a new token after a user logs in.
+  /// This method allows dynamic updating of the token in the headers.
   static void setTokenIntoHeaderAfterLogin(String token) {
     dio?.options.headers = {
       'Authorization': 'Bearer $token',
     };
   }
   // show how you could add headers to the Dio instance:
-// addDioHeaders: Adds default headers, including an authorization token fetched from shared preferences.
-// setTokenIntoHeaderAfterLogin: Sets the authorization header after logging in.
+  // addDioHeaders: Adds default headers, including an authorization token
+  // fetched from shared preferences.
+  // setTokenIntoHeaderAfterLogin: Sets the authorization header after logging in.
 
   static void addDioInterceptor() {
     // The addDioInterceptor() method adds a PrettyDioLogger interceptor to log

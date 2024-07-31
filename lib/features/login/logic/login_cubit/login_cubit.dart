@@ -9,14 +9,17 @@ import '../../../../core/helpers/shared_preferences_helper.dart';
 import '../../../../core/networking/dio_factory.dart';
 
 class LoginCubit extends Cubit<LoginState> {
-  final LoginRepo _loginRepo;
   // final LoginRepo _loginRepo;: Declares a final variable _loginRepo of type
   // LoginRepo.
 
   LoginCubit(this._loginRepo) : super(const LoginState.initial());
+
   TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  TextEditingController passwordController = TextEditingController();
+
+  final LoginRepo _loginRepo;
+
   // emailController and passwordController: Instances of TextEditingController
   // to manage the text input for email and password fields.
   // formKey: A key to uniquely identify the form and access its state.
@@ -46,6 +49,7 @@ class LoginCubit extends Cubit<LoginState> {
       // success: (loginResponse) {...}: If the login succeeds, emits a
       // LoginState.success state with the loginResponse.
       failure: (error) {
+        // If the login fails, emits a failure state with an error message.
         emit(
           LoginState.failure(
             error: error.apiErrorModel.message ?? "Something went wrong",
@@ -53,6 +57,8 @@ class LoginCubit extends Cubit<LoginState> {
         );
       },
       sucess: (loginResponse) async {
+        // If the login is successful, saves the user token, then emits a
+        // success state with the login response.
         await saveUserToken(loginResponse.userData.token);
         emit(
           LoginState.success(loginResponse),
@@ -63,8 +69,13 @@ class LoginCubit extends Cubit<LoginState> {
   }
 }
 
+/// Saves the user token securely and updates the Dio instance with the new token.
 Future<void> saveUserToken(String token) async {
   await SharedPreferencesfHelper.setSecuredString(
-      SharedPreferencesfKeys.userToken, token);
+    // Saves the token in FlutterSecureStorage.
+    SharedPreferencesfKeys.userToken,
+    token,
+  );
   DioFactory.setTokenIntoHeaderAfterLogin(token);
+  // Updates the Dio headers with the new token for authenticated API requests.
 }

@@ -34,7 +34,9 @@ class DocSpotApp extends StatelessWidget {
           primaryColor: DocSpotColorsManager.primaryBlueColor,
           scaffoldBackgroundColor: Colors.white,
         ),
-        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
+        initialRoute:
+            isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
+            // Sets the initial route based on whether the user is logged in.
         onGenerateRoute: appRouter.generateRoute,
         home: const OnBoardingScreen(),
       ),

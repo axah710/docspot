@@ -20,6 +20,8 @@ void main() async {
   // important for responsive design also solve the ScreenUtil
   // problem in realse mode .
   await checkIfLoggedInUser();
+  // Checks if there is a logged-in user by retrieving a token from
+  // secure storage.
 
   runApp(
     DocSpotApp(
@@ -29,10 +31,19 @@ void main() async {
 }
 
 checkIfLoggedInUser() async {
+  // An asynchronous function that checks if a user token is stored in
+  // secure storage.
   String? userToken = await SharedPreferencesfHelper.getSecuredString(
-      SharedPreferencesfKeys.userToken);
+    SharedPreferencesfKeys.userToken,
+    // A helper method to retrieve a secured string (user token) from
+    // Flutter Secure Storage.
+  );
   if (!userToken.isNullOrEmpty()) {
+    // Checks if the retrieved token is neither null nor empty. The extension
+    // method isNullOrEmpty is defined in extinsions.dart.
     isLoggedInUser = true;
+    // Sets a global variable to indicate that
+    // the user is logged in.
   } else {
     isLoggedInUser = false;
   }

@@ -32,10 +32,16 @@ extension Navigation on BuildContext {
   // These methods utilize the Navigator class to manage the app's navigation stack.
 }
 
+///This extension adds functionality to nullable String (String?).
 extension StringExtension on String? {
   bool isNullOrEmpty() => this == null || this == "";
+  // This method checks if the String instance is either null or an
+  // empty string ("").
 }
 
+///This extension adds functionality to nullable List (List<T>?), where T
+/// is a generic type parameter.
 extension ListExtension<T> on List<T>? {
   bool isNullOrEmpty() => this == null || this!.isEmpty;
+  // This method checks if the List instance is either null or empty.
 }
