@@ -1,5 +1,6 @@
 import 'package:docspot/core/di/service_locator.dart';
 import 'package:docspot/core/routing/routes.dart';
+import 'package:docspot/features/home/logic/home_cubit/home_cubit.dart';
 import 'package:docspot/features/home/ui/screens/home_screen.dart';
 import 'package:docspot/features/login/logic/login_cubit/login_cubit.dart';
 import 'package:docspot/features/login/ui/login_screen.dart';
@@ -10,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DocSpotRouter {
-  Route generateRoute(RouteSettings settings) {
+  Route? generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
@@ -30,7 +31,13 @@ class DocSpotRouter {
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => HomeCubit(getIt()),
+            // HomeCubit(getIt()),
+            // same as:
+            // getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
+            child: const HomeScreen(),
+          ),
         );
       case Routes.signupScreen:
         return MaterialPageRoute(
@@ -40,15 +47,16 @@ class DocSpotRouter {
           ),
         );
       default:
-        return MaterialPageRoute(
-          builder: (context) => Scaffold(
-            body: Center(
-              child: Text(
-                "No route defined for ${settings.name}",
-              ),
-            ),
-          ),
-        );
+        return null;
+      // MaterialPageRoute(
+      //   builder: (context) => Scaffold(
+      //     body: Center(
+      //       child: Text(
+      //         "No route defined for ${settings.name}",
+      //       ),
+      //     ),
+      //   ),
+      // );
     }
   }
 }

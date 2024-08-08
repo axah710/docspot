@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:docspot/core/networking/api_service.dart';
 import 'package:docspot/core/networking/dio_factory.dart';
+import 'package:docspot/features/home/data/apis/home_api_service.dart';
+import 'package:docspot/features/home/data/repos/home_repo.dart';
 import 'package:docspot/features/login/data/repos/login_repo.dart';
 import 'package:docspot/features/login/logic/login_cubit/login_cubit.dart';
 import 'package:docspot/features/signup/data/repo/signup_repo.dart';
@@ -57,6 +59,19 @@ Future<void> setupGetIt() async {
   // Registers SignupCubit as a factory. A new instance of SignupCubit will
   // be created every time it is requested. It is initialized with an instance
   // of SignupRepo, which is retrieved from GetIt.
+  getIt.registerLazySingleton<HomeApiService>(
+    () => HomeApiService(dio),
+  );
+
+  //Home Repo
+  getIt.registerLazySingleton<HomeRepo>(
+    () => HomeRepo(
+      getIt(),
+    ),
+  );
+// Used another way in app router due to we need to register HomeCubit
+//  many times..
+  // getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
 }
 // This function is asynchronous and will be used to configure the service
 // locator by registering various services and dependencies.
