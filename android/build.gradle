@@ -1,13 +1,13 @@
 buildscript {
-    ext.kotlin_version = '1.8.0' // Use the latest Kotlin version
+    ext.kotlin_version = '2.0.10' // Use the latest Kotlin version
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2' // Use the latest Gradle plugin version
+        classpath 'com.android.tools.build:gradle:8.5.0' // Use the latest Gradle plugin version
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.google.gms:google-services:4.3.14' // Use the latest Google Services plugin version
+        classpath 'com.google.gms:google-services:4.4.2' // Use the latest Google Services plugin version
     }
 }
 
