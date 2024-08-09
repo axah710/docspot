@@ -32,7 +32,7 @@ class DocSpotRouter {
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
-            create: (context) => HomeCubit(getIt()),
+            create: (context) => HomeCubit(getIt())..getSpecializations(),
             // HomeCubit(getIt()),
             // same as:
             // getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
