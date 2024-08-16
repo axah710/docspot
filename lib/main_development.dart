@@ -3,12 +3,16 @@ import 'package:docspot/core/helpers/extinsions.dart';
 import 'package:docspot/core/routing/app_router.dart';
 import 'package:docspot/docspot_app.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/constants/constants.dart';
 import 'core/helpers/shared_preferences_helper.dart';
+import 'core/helpers/simple_bloc_observer.dart';
 
 void main() async {
+    Bloc.observer = SimpleBlocObserver();
+
   WidgetsFlutterBinding.ensureInitialized();
   // This line initializes the service locator.
   setupGetIt();
