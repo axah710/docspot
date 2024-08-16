@@ -33,6 +33,16 @@ class DocSpotRouter {
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => HomeCubit(getIt())..getSpecializations(),
+            // ..: This is the cascade operator in Dart, allowing you to
+            // perform multiple operations on the same object. It returns the
+            // object after the operations, so you can chain method calls.
+            // operator ensures that this method is called immediately
+            // after the HomeCubit is created.
+            // Calling getSpecializations(): Immediately after the HomeCubit is
+            // created, it calls the getSpecializations() method to fetch or
+            // prepare data, which might be required for the home
+            // screen of your app.
+
             // HomeCubit(getIt()),
             // same as:
             // getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
