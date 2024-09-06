@@ -136,8 +136,8 @@ The sign-up screen facilitates new user registration. Features include:
 - **Confirm Password Input**: Re-enter the password for confirmation.
 - **Sign Up Button**: Complete the registration process.
 
+## Home Screen
 
-### Home Screen
 ![Home Screen](https://github.com/user-attachments/assets/c3bd851f-626f-4e29-926d-1df71a03c24c)
 
 The home screen of the DocSpot app offers the following features:
