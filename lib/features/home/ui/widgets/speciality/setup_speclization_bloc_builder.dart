@@ -1,12 +1,12 @@
-import 'package:docspot/features/home/ui/widgets/doctors_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/helpers/spacing.dart';
-import '../../logic/home_cubit/home_cubit.dart';
-import '../../logic/home_cubit/home_state.dart';
-import 'doctor_spiciality_list_view.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../logic/home_cubit/home_cubit.dart';
+import '../../../logic/home_cubit/home_state.dart';
+import '../home_shimmer/doctors_shimmer_loading.dart';
+import '../home_shimmer/speciality_shimmer_loading.dart';
+import 'spiciality_list_view.dart';
 
 class SpeclizationAndDoctorBlocBuilder extends StatelessWidget {
   const SpeclizationAndDoctorBlocBuilder({super.key});
@@ -18,8 +18,12 @@ class SpeclizationAndDoctorBlocBuilder extends StatelessWidget {
             current is SpicializationsLoading ||
             current is SpicializationsSuccess ||
             current is spicializationsFailed),
+        // A function that determines if the widget should rebuild.
+        // It optimizing performance by avoiding unnecessary
+        // rebuilds for other states.
         builder: (context, state) {
           return state.maybeWhen(
+            // Allows handling specific states .
             spicializationsLoading: () {
               return SizedBox(
                 height: 100.h,
@@ -28,9 +32,9 @@ class SpeclizationAndDoctorBlocBuilder extends StatelessWidget {
                 ),
               );
             },
-            spicializationsSuccess: (specializationsResponseModel) {
+            spicializationsSuccess: (specializationsResponseDataModel) {
               var specializationsResponseModelDataList =
-                  specializationsResponseModel.specializationDataList;
+                  specializationsResponseDataModel;
               return setupSuccess(specializationsResponseModelDataList);
             },
             spicializationsFailed: (errorHandler) {
@@ -44,29 +48,21 @@ class SpeclizationAndDoctorBlocBuilder extends StatelessWidget {
   }
 
   Widget setupLoading() {
-    return SizedBox(
-      height: 100.h,
-      child: const Center(
-        child: CircularProgressIndicator(),
+    return Expanded(
+      child: Column(
+        children: [
+          const SpecialityShimmerLoading(),
+          verticalSpace(8),
+          const DoctorsShimmerLoading(),
+        ],
       ),
     );
   }
 
   Widget setupSuccess(specializationsResponseModelDataList) {
-    return Expanded(
-      child: Column(
-        children: [
-          DoctorSpicialityListView(
-            specializationsResponseModelDataList:
-                specializationsResponseModelDataList ?? [],
-          ),
-          verticalSpace(8),
-          DoctorsListView(
-            doctorDataList:
-                specializationsResponseModelDataList?[0]?.doctorsList,
-          ),
-        ],
-      ),
+    return SpicialityListView(
+      specializationsResponseModelDataList:
+          specializationsResponseModelDataList ?? [],
     );
   }
 

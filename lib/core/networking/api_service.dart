@@ -4,6 +4,7 @@ import 'package:docspot/features/login/data/models/login_request_body.dart';
 import 'package:docspot/features/login/data/models/login_response.dart';
 import 'package:docspot/features/signup/data/models/signup_request_body.dart';
 import 'package:docspot/features/signup/data/models/signup_response.dart';
+import 'package:retrofit/error_logger.dart';
 import 'package:retrofit/http.dart';
 part "api_service.g.dart";
 

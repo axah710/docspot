@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theming/app_fonts.dart';
+import '../../../../../core/theming/app_fonts.dart';
 
-class DoctorSpecialitySeeAll extends StatelessWidget {
-  const DoctorSpecialitySeeAll({super.key});
+class SpecialitySeeAll extends StatelessWidget {
+  const SpecialitySeeAll({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -5,6 +5,7 @@ import 'doctors_list_view_item.dart';
 
 class DoctorsListView extends StatelessWidget {
   final List<DoctorsModel?>? doctorDataList;
+  // Contains the data for the doctors to be displayed.
   const DoctorsListView({super.key, this.doctorDataList});
 
   @override
@@ -23,6 +24,9 @@ class DoctorsListView extends StatelessWidget {
             doctorDataList: doctorDataList?[index],
           );
         },
+        // Each item in the list is created using the DoctorListViewItem widget,
+        // passing the corresponding doctor data from doctorDataList based on
+        // the current index.
       ),
     );
   }
