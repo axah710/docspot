@@ -136,6 +136,16 @@ The sign-up screen facilitates new user registration. Features include:
 - **Confirm Password Input**: Re-enter the password for confirmation.
 - **Sign Up Button**: Complete the registration process.
 
+## Home Screen
+
+![Home Screen](https://github.com/user-attachments/assets/c3bd851f-626f-4e29-926d-1df71a03c24c)
+
+The home screen of the DocSpot app offers the following features:
+
+- **Greeting Section:** The app greets the user, e.g., "Hi, Ahmed," and asks, "How are you today?"
+- **Call to Action:** A blue card prompts the user to "Book and schedule with the nearest doctor" with a "Find Nearby" button.
+- **Doctor Speciality Section:** This section lists various doctor specialties such as Cardiology, Dermatology, Neurology, and Orthopedics.
+- **Doctor List:** A list of doctors, including their names, titles, phone numbers, and email addresses. 
   
 ## Installation
 
