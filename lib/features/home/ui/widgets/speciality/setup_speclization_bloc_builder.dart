@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../logic/home_cubit/home_cubit.dart';
 import '../../../logic/home_cubit/home_state.dart';
@@ -25,12 +24,7 @@ class SpeclizationAndDoctorBlocBuilder extends StatelessWidget {
           return state.maybeWhen(
             // Allows handling specific states .
             spicializationsLoading: () {
-              return SizedBox(
-                height: 100.h,
-                child: const Center(
-                  child: CircularProgressIndicator(),
-                ),
-              );
+              return setupLoading();
             },
             spicializationsSuccess: (specializationsResponseDataModel) {
               var specializationsResponseModelDataList =
@@ -46,6 +40,7 @@ class SpeclizationAndDoctorBlocBuilder extends StatelessWidget {
           );
         });
   }
+  
 
   Widget setupLoading() {
     return Expanded(

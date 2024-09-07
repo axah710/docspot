@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
@@ -45,6 +47,10 @@ class DioFactory {
       // addDioHeaders: Adds default headers to the Dio instance.
       addDioInterceptor();
       // addDioInterceptor: Adds an interceptor to log request and response details.
+
+      addCheckRefreshTokenDioInterceptor();
+      // addCheckRefreshTokenDioInterceptor:
+      // Adds an interceptor to check if the token is expired or not.
       return dio!;
       // return dio!;: Returns the initialized Dio instance.
     } else {
@@ -81,25 +87,52 @@ class DioFactory {
   // fetched from shared preferences.
   // setTokenIntoHeaderAfterLogin: Sets the authorization header after logging in.
 
+  /// This method adds a PrettyDioLogger interceptor
+  /// to log request and response details for debugging purposes.
   static void addDioInterceptor() {
-    // The addDioInterceptor() method adds a PrettyDioLogger interceptor to log
-    //request and response details for debugging purposes.
+    PrettyDioLogger(
+      requestBody: true,
+      //  Logs the request body.
+      requestHeader: true,
+      // Logs the request headers.
+      responseHeader: true,
+      //  Logs the response headers.
+      request: true,
+      // Logs the request.
+      responseBody: true,
+      // Logs the response body.
+      error: true,
+      //  Logs any errors.
+      compact: true,
+      // Logs the details in a compact format.
+    );
+  }
+
+  /// This method adds a Check Refresh Token Dio Interceptor
+  /// to check if the token is expired or not.
+  static void addCheckRefreshTokenDioInterceptor() {
     dio?.interceptors.add(
-      PrettyDioLogger(
-        requestBody: true,
-        //  Logs the request body.
-        requestHeader: true,
-        // Logs the request headers.
-        responseHeader: true,
-        //  Logs the response headers.
-        request: true,
-        // Logs the request.
-        responseBody: true,
-        // Logs the response body.
-        error: true,
-        //  Logs any errors.
-        compact: true,
-        // Logs the details in a compact format.
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          // This onRequest method is called before the request is sent.
+          return handler.next(options);
+        },
+        onResponse: (response, handler) {
+          // This onResponse method is called after the response is received.
+          log("response ${response.data}");
+          // return handler.next(response);
+        },
+        onError: (DioException e, handler) async {
+          if (e.response?.statusCode == 401) {
+            // This onError method is called when an error occurs while sending
+            // or receiving the request.
+            // Can be used with refresh token in case of 401 (Expired token).
+            //! Need to add the refresh token logic.
+            log("response ${e.error}");
+
+            // return handler.next(e);
+          }
+        },
       ),
     );
   }

@@ -19,6 +19,7 @@ class DoctorListViewItem extends StatelessWidget {
       ),
       child: Row(
         children: [
+          
           ClipRRect(
             // Clips its child using a rounded rectangle. The borderRadius
             // parameter sets the corner radius, making the image have
@@ -63,3 +64,36 @@ class DoctorListViewItem extends StatelessWidget {
     );
   }
 }
+
+//! Will use this code later ...
+//  CachedNetworkImage(
+//             imageUrl:
+//                 "https://static.wikia.nocookie.net/five-world-war/images/6/64/Hisoka.jpg/revision/latest?cb=20190313114050",
+//             progressIndicatorBuilder: (context, url, downloadProgress) {
+//               return Shimmer.fromColors(
+//                 baseColor: ColorsManager.lightGray,
+//                 highlightColor: Colors.white,
+//                 child: Container(
+//                   width: 110.w,
+//                   height: 120.h,
+//                   decoration: BoxDecoration(
+//                     shape: BoxShape.rectangle,
+//                     borderRadius: BorderRadius.circular(12.0),
+//                     color: Colors.white,
+//                   ),
+//                 ),
+//               );
+//             },
+//             imageBuilder: (context, imageProvider) => Container(
+//               width: 110.w,
+//               height: 120.h,
+//               decoration: BoxDecoration(
+//                 shape: BoxShape.rectangle,
+//                 borderRadius: BorderRadius.circular(12.0),
+//                 image: DecorationImage(
+//                   image: imageProvider,
+//                   fit: BoxFit.cover,
+//                 ),
+//               ),
+//             ),
+//           ),
