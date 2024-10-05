@@ -37,7 +37,7 @@ void main() {
       message: 'Signup successful',
       status: true,
     );
-   //! This is the core of mocking. Here, we're telling mockito to simulate a successful API call when the signup method is called with signupRequest. Instead of making an actual API call, thenAnswer immediately returns the signupResponse.
+    //! This is the core of mocking. Here, we're telling mockito to simulate a successful API call when the signup method is called with signupRequest. Instead of making an actual API call, thenAnswer immediately returns the signupResponse.
     when(mockApiService.signup(signupRequest)).thenAnswer(
       (_) async => signupResponse,
     );
@@ -55,7 +55,7 @@ void main() {
 
   //! This test simulates a failure scenario where the API throws an exception instead of returning a success response.
   test('Test signup API failure response', () async {
-    // Arrange: mock a failed response for signup
+    //! Arrange: mock a failed response for signup
     final signupRequest = SignupRequestBody(
       email: 'existinguser@example.com',
       password: 'password123',
@@ -65,7 +65,7 @@ void main() {
       gender: 0,
     );
 
-  //! Mocks the signup method to throw a DioException. This simulates an API failure (e.g., the user already exists, or there's a server error).
+    //! Mocks the signup method to throw a DioException. This simulates an API failure (e.g., the user already exists, or there's a server error).
     when(mockApiService.signup(signupRequest)).thenThrow(
       DioException(
         requestOptions: RequestOptions(path: ApiConstants.signupUrl),
@@ -74,15 +74,20 @@ void main() {
 
     // Act & Assert: expect an exception to be thrown
     //! Asserts that calling signup with the given request should throw an exception, specifically a DioException.
+    //! throwsException: checks that any exception is thrown.
     expect(
       () async => await mockApiService.signup(signupRequest),
       throwsException,
+    );
+    //! throwsA(isA<DioException>()): checks that the thrown exception is of type DioException.
+    expect(
+      () async => await mockApiService.signup(signupRequest),
+      throwsA(isA<DioException>()),
     );
   });
 }
 
 ////? The tests we implemented provide several key benefits:
-
 
 ////! The tests act as a form of documentation for expected behavior.
 ////! By reading the test, you can immediately understand what the API service
@@ -93,11 +98,13 @@ void main() {
 ////! API errors. This prevents potential crashes or unhandled exceptions in the
 ////! app when the API returns an error (e.g., invalid credentials, existing email).
 
-
 ////! These tests validate that your app follows the contract with the API.
 ////! By mocking the expected responses, you're ensuring that the app behaves
 ////! correctly according to the structure of the request
 ////! (SignupRequestBody) and response (SignupResponse).
+
+
+////? Summary:
 
 ////! Ensures the app handles signup functionality correctly.
 ////! No dependency on actual API availability during tests.
@@ -105,6 +112,7 @@ void main() {
 
 
 ////? Network request unit testing:
+
 ////! We will use Mockito and build_runner packages. The build_runner will generate mock classes that simulate the real Dio.
 ////! MockDio() is a mock request instance. If we used Dio(), it would make real requests, but here we only simulate the operation.
 ////! We will create test groups that contain test cases. We use `when()` to simulate the request and `thenAnswer()` to simulate the response.
