@@ -83,6 +83,8 @@ void main() {
     expect(
       () async => await mockApiService.signup(signupRequest),
       throwsA(isA<DioException>()),
+      //! Use @Skip in Dart to ignore tests for incomplete features or temporary issues.
+      // skip: 'This test is currently not applicable',
     );
   });
 }
