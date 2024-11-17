@@ -14,81 +14,90 @@ import 'api_service_test.mocks.dart';
 
 void main() {
   //! Declares a variable mockApiService of type MockApiService. It’s marked as late, meaning it will be initialized later, usually inside setUp.
+
   late MockApiService mockApiService;
   //! The setUp function runs before each test. Here, it initializes mockApiService by creating a new instance of MockApiService so that each test starts with a fresh mock object.
+
   setUp(() {
     mockApiService = MockApiService();
   });
 
-  //! Defines a test case to check the behavior of the signup method for a successful response. It's marked as async because API calls return Future objects and must be awaited.
-  test('Test signup API success response', () async {
-    // Arrange: mock a successful response for signup
-    //! Creates an instance of SignupRequestBody with sample data to simulate a signup request.
-    final signupRequest = SignupRequestBody(
-      email: 'newuser@example.com',
-      password: 'password123',
-      name: 'New User',
-      phone: '1234567890',
-      passwordConfirmation: "password123",
-      gender: 0,
+  SignupRequestBody createSignupRequest({
+    String email = 'newuser@example.com',
+    String password = 'password123',
+    String name = 'New User',
+    String phone = '1234567890',
+    String passwordConfirmation = 'password123',
+    int gender = 0,
+  }) {
+    return SignupRequestBody(
+      email: email,
+      password: password,
+      name: name,
+      phone: phone,
+      passwordConfirmation: passwordConfirmation,
+      gender: gender,
     );
+  }
+
+  //! Defines a test case to check the behavior of the signup method for a successful response. It's marked as async because API calls return Future objects and must be awaited.
+
+  test('Test signup API success response', () async {
+    //! Creates an instance of SignupRequestBody with sample data to simulate a signup request.
+
+    final signupRequest = createSignupRequest();
     //! Creates an instance of SignupResponse representing the expected response from the server after a successful signup.
+
     final signupResponse = SignupResponse(
       message: 'Signup successful',
       status: true,
     );
     //! This is the core of mocking. Here, we're telling mockito to simulate a successful API call when the signup method is called with signupRequest. Instead of making an actual API call, thenAnswer immediately returns the signupResponse.
+
     when(mockApiService.signup(signupRequest)).thenAnswer(
       (_) async => signupResponse,
     );
 
     // Act: call the signup function
     //! Calls the signup method on the mock object and stores the result in result. Since it's a mock, the method returns the signupResponse defined earlier.
+
     final result = await mockApiService.signup(signupRequest);
 
     // Assert: check if the result matches the expected response
     //! Asserts that the status of the response is true, indicating a successful signup.
+
     expect(result.status, true);
     //! Asserts that the message of the response is 'Signup successful', matching the expected value.
+
     expect(result.message, 'Signup successful');
   });
-
   //! This test simulates a failure scenario where the API throws an exception instead of returning a success response.
+
   test('Test signup API failure response', () async {
     //! Arrange: mock a failed response for signup
-    final signupRequest = SignupRequestBody(
-      email: 'existinguser@example.com',
-      password: 'password123',
-      name: 'Existing User',
-      phone: '1234567890',
-      passwordConfirmation: "password123",
-      gender: 0,
-    );
+
+    final signupRequest =
+        createSignupRequest(email: 'existinguser@example.com');
 
     //! Mocks the signup method to throw a DioException. This simulates an API failure (e.g., the user already exists, or there's a server error).
+
     when(mockApiService.signup(signupRequest)).thenThrow(
       DioException(
         requestOptions: RequestOptions(path: ApiConstants.signupUrl),
       ),
     );
-
     // Act & Assert: expect an exception to be thrown
     //! Asserts that calling signup with the given request should throw an exception, specifically a DioException.
     //! throwsException: checks that any exception is thrown.
     expect(
       () async => await mockApiService.signup(signupRequest),
-      throwsException,
-    );
-    //! throwsA(isA<DioException>()): checks that the thrown exception is of type DioException.
-    expect(
-      () async => await mockApiService.signup(signupRequest),
       throwsA(isA<DioException>()),
-      //! Use @Skip in Dart to ignore tests for incomplete features or temporary issues.
+      //! throwsA(isA<DioException>()): checks that the thrown exception is of type DioException.
       // skip: 'This test is currently not applicable',
+      //! Use @Skip in Dart to ignore tests for incomplete features or temporary issues.
     );
   });
 }
-
 ////? The tests we implemented provide several key benefits:
 
 ////! The tests act as a form of documentation for expected behavior.

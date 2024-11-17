@@ -5,10 +5,10 @@ In this process, we will use the `Mockito` and `build_runner` packages to effect
 Steps:
 
 1. Mock Class Generation:  
-   The `build_runner` package will be used to generate mock classes. These mock classes simulate the behavior of real classes, such as Dio, without making actual network requests. 
+   The `build_runner` package will be used to generate mock classes. These mock classes simulate the behavior of real classes, such as Dio, without making actual network requests.
    
-2. Purpose of Mocking:  
-   Mocking creates a class that mimics the real functionality of a network request. For instance, `MockDio()` is a mock instance of Dio. If we were to use `Dio()`, it would perform a real                    
+2. Purpose of Mocking:
+   Mocking creates a class that mimics the real functionality of a network request. For instance, `MockDio()` is a mock instance of Dio. If we were to use `Dio()`, it would perform a real
    request. However, by using `MockDio()`, we can simulate network operations without actually calling external servers.
 
 3. Test Groups and Test Cases:  
