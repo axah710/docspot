@@ -1,7 +1,7 @@
-import 'package:docspot/core/theming/app_fonts.dart';
-import 'package:docspot/features/onboarding/ui/widgets/get_started_button.dart';
-import 'package:docspot/features/onboarding/ui/widgets/doc_image_and_text.dart';
-import 'package:docspot/features/onboarding/ui/widgets/doc_logo_and_name.dart';
+import '../../../core/theming/app_fonts.dart';
+import 'widgets/get_started_button.dart';
+import 'widgets/doc_image_and_text.dart';
+import 'widgets/doc_logo_and_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

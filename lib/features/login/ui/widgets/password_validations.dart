@@ -1,5 +1,5 @@
-import 'package:docspot/core/helpers/spacing.dart';
-import 'package:docspot/features/login/ui/widgets/build_validation_row.dart';
+import '../../../../core/helpers/spacing.dart';
+import 'build_validation_row.dart';
 import 'package:flutter/material.dart';
 
 class PasswordValidations extends StatelessWidget {

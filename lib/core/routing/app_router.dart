@@ -1,12 +1,12 @@
-import 'package:docspot/core/di/service_locator.dart';
-import 'package:docspot/core/routing/routes.dart';
-import 'package:docspot/features/home/logic/home_cubit/home_cubit.dart';
-import 'package:docspot/features/home/ui/screens/home_screen.dart';
-import 'package:docspot/features/login/logic/login_cubit/login_cubit.dart';
-import 'package:docspot/features/login/ui/login_screen.dart';
-import 'package:docspot/features/onboarding/ui/onboarding_screen.dart';
-import 'package:docspot/features/signup/logic/cubit/signup_cubit.dart';
-import 'package:docspot/features/signup/ui/signup_screen.dart';
+import '../di/service_locator.dart';
+import 'routes.dart';
+import '../../features/home/logic/home_cubit/home_cubit.dart';
+import '../../features/home/ui/screens/home_screen.dart';
+import '../../features/login/logic/login_cubit/login_cubit.dart';
+import '../../features/login/ui/login_screen.dart';
+import '../../features/onboarding/ui/onboarding_screen.dart';
+import '../../features/signup/logic/cubit/signup_cubit.dart';
+import '../../features/signup/ui/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

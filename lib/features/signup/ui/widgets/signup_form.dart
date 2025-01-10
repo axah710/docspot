@@ -1,8 +1,8 @@
-import 'package:docspot/core/helpers/docspot_regex.dart';
-import 'package:docspot/core/helpers/spacing.dart';
-import 'package:docspot/core/widgets/text_form_field.dart';
-import 'package:docspot/features/login/ui/widgets/password_validations.dart';
-import 'package:docspot/features/signup/logic/cubit/signup_cubit.dart';
+import '../../../../core/helpers/docspot_regex.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/widgets/text_form_field.dart';
+import '../../../login/ui/widgets/password_validations.dart';
+import '../../logic/cubit/signup_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

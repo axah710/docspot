@@ -1,8 +1,8 @@
-import 'package:docspot/core/networking/api_error_handler.dart';
-import 'package:docspot/features/home/data/models/specializations_response_model.dart';
-import 'package:docspot/features/home/logic/home_cubit/home_cubit.dart';
-import 'package:docspot/features/home/logic/home_cubit/home_state.dart';
-import 'package:docspot/features/home/ui/widgets/doctor/doctors_list_view.dart';
+import '../../../../../core/networking/api_error_handler.dart';
+import '../../../data/models/specializations_response_model.dart';
+import '../../../logic/home_cubit/home_cubit.dart';
+import '../../../logic/home_cubit/home_state.dart';
+import 'doctors_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

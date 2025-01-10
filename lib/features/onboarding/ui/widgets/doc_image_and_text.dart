@@ -1,5 +1,5 @@
-import 'package:docspot/core/theming/app_fonts.dart';
-import 'package:docspot/core/widgets/svg_displayer.dart';
+import '../../../../core/theming/app_fonts.dart';
+import '../../../../core/widgets/svg_displayer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

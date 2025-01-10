@@ -1,7 +1,7 @@
-import 'package:docspot/core/routing/app_router.dart';
-import 'package:docspot/core/routing/routes.dart';
-import 'package:docspot/core/theming/app_colors.dart';
-import 'package:docspot/features/onboarding/ui/onboarding_screen.dart';
+import 'core/routing/app_router.dart';
+import 'core/routing/routes.dart';
+import 'core/theming/app_colors.dart';
+import 'features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

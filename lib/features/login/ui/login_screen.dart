@@ -1,13 +1,13 @@
-import 'package:docspot/core/helpers/spacing.dart';
-import 'package:docspot/core/theming/app_fonts.dart';
-import 'package:docspot/core/widgets/app_text_button.dart';
-import 'package:docspot/core/widgets/build_divider.dart';
-import 'package:docspot/core/widgets/svg_displayer.dart';
-import 'package:docspot/features/login/ui/widgets/dont_have_account_text.dart';
-import 'package:docspot/features/login/ui/widgets/email_and_password_form.dart';
-import 'package:docspot/features/login/ui/widgets/login_bloc_listner.dart';
-import 'package:docspot/features/login/ui/widgets/terms_and_conditions_text.dart';
-import 'package:docspot/features/login/ui/widgets/validate_then_login.dart';
+import '../../../core/helpers/spacing.dart';
+import '../../../core/theming/app_fonts.dart';
+import '../../../core/widgets/app_text_button.dart';
+import '../../../core/widgets/build_divider.dart';
+import '../../../core/widgets/svg_displayer.dart';
+import 'widgets/dont_have_account_text.dart';
+import 'widgets/email_and_password_form.dart';
+import 'widgets/login_bloc_listner.dart';
+import 'widgets/terms_and_conditions_text.dart';
+import 'widgets/validate_then_login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -1,7 +1,7 @@
-import 'package:docspot/core/di/service_locator.dart';
-import 'package:docspot/core/helpers/extinsions.dart';
-import 'package:docspot/core/routing/app_router.dart';
-import 'package:docspot/docspot_app.dart';
+import 'core/di/service_locator.dart';
+import 'core/helpers/extinsions.dart';
+import 'core/routing/app_router.dart';
+import 'docspot_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

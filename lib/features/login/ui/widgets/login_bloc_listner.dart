@@ -1,6 +1,6 @@
-import 'package:docspot/features/login/logic/login_cubit/login_cubit.dart';
-import 'package:docspot/features/login/logic/login_cubit/login_state.dart';
-import 'package:docspot/features/login/ui/widgets/setup_bloc_listner_states.dart';
+import '../../logic/login_cubit/login_cubit.dart';
+import '../../logic/login_cubit/login_state.dart';
+import 'setup_bloc_listner_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

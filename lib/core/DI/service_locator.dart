@@ -1,12 +1,12 @@
 import 'package:dio/dio.dart';
-import 'package:docspot/core/networking/api_service.dart';
-import 'package:docspot/core/networking/dio_factory.dart';
-import 'package:docspot/features/home/data/apis/home_api_service.dart';
-import 'package:docspot/features/home/data/repos/home_repo.dart';
-import 'package:docspot/features/login/data/repos/login_repo.dart';
-import 'package:docspot/features/login/logic/login_cubit/login_cubit.dart';
-import 'package:docspot/features/signup/data/repo/signup_repo.dart';
-import 'package:docspot/features/signup/logic/cubit/signup_cubit.dart';
+import '../networking/api_service.dart';
+import '../networking/dio_factory.dart';
+import '../../features/home/data/apis/home_api_service.dart';
+import '../../features/home/data/repos/home_repo.dart';
+import '../../features/login/data/repos/login_repo.dart';
+import '../../features/login/logic/login_cubit/login_cubit.dart';
+import '../../features/signup/data/repo/signup_repo.dart';
+import '../../features/signup/logic/cubit/signup_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;

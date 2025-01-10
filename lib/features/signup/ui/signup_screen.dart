@@ -1,11 +1,11 @@
-import 'package:docspot/core/helpers/spacing.dart';
-import 'package:docspot/core/theming/app_fonts.dart';
-import 'package:docspot/core/widgets/app_text_button.dart';
-import 'package:docspot/features/login/ui/widgets/terms_and_conditions_text.dart';
-import 'package:docspot/features/signup/logic/cubit/signup_cubit.dart';
-import 'package:docspot/features/signup/ui/widgets/already_have_an_account.dart';
-import 'package:docspot/features/signup/ui/widgets/signup_bloc_listner.dart';
-import 'package:docspot/features/signup/ui/widgets/signup_form.dart';
+import '../../../core/helpers/spacing.dart';
+import '../../../core/theming/app_fonts.dart';
+import '../../../core/widgets/app_text_button.dart';
+import '../../login/ui/widgets/terms_and_conditions_text.dart';
+import '../logic/cubit/signup_cubit.dart';
+import 'widgets/already_have_an_account.dart';
+import 'widgets/signup_bloc_listner.dart';
+import 'widgets/signup_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

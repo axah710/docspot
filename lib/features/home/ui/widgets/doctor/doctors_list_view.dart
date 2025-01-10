@@ -1,4 +1,4 @@
-import 'package:docspot/features/home/data/models/specializations_response_model.dart';
+import '../../../data/models/specializations_response_model.dart';
 import 'package:flutter/material.dart';
 
 import 'doctors_list_view_item.dart';

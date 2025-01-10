@@ -1,4 +1,4 @@
-import 'package:docspot/core/networking/api_error_handler.dart';
+import '../../../../core/networking/api_error_handler.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../data/models/specializations_response_model.dart';

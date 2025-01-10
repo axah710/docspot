@@ -1,4 +1,4 @@
-import 'package:docspot/core/networking/api_result.dart';
+import '../../../../core/networking/api_result.dart';
 
 import '../../../../core/networking/api_error_handler.dart';
 import '../apis/home_api_service.dart';

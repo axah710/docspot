@@ -1,8 +1,8 @@
-import 'package:docspot/core/networking/api_error_handler.dart';
-import 'package:docspot/core/networking/api_result.dart';
-import 'package:docspot/core/networking/api_service.dart';
-import 'package:docspot/features/login/data/models/login_request_body.dart';
-import 'package:docspot/features/login/data/models/login_response.dart';
+import '../../../../core/networking/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../../../../core/networking/api_service.dart';
+import '../models/login_request_body.dart';
+import '../models/login_response.dart';
 
 class LoginRepo {
   // Declares a final instance variable _apiService of type ApiService.

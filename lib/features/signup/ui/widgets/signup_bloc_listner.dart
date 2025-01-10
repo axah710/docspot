@@ -1,9 +1,9 @@
-import 'package:docspot/core/helpers/extinsions.dart';
-import 'package:docspot/core/routing/routes.dart';
-import 'package:docspot/core/theming/app_colors.dart';
-import 'package:docspot/core/theming/app_fonts.dart';
-import 'package:docspot/features/signup/logic/cubit/signup_cubit.dart';
-import 'package:docspot/features/signup/logic/cubit/signup_state.dart';
+import '../../../../core/helpers/extinsions.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_fonts.dart';
+import '../../logic/cubit/signup_cubit.dart';
+import '../../logic/cubit/signup_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

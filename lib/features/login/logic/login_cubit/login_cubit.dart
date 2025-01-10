@@ -1,6 +1,6 @@
-import 'package:docspot/features/login/data/models/login_request_body.dart';
-import 'package:docspot/features/login/data/repos/login_repo.dart';
-import 'package:docspot/features/login/logic/login_cubit/login_state.dart';
+import '../../data/models/login_request_body.dart';
+import '../../data/repos/login_repo.dart';
+import 'login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

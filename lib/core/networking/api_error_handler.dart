@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:docspot/core/networking/api_contants.dart';
+import 'api_contants.dart';
 import 'api_error_model.dart';
 // This file apply "Prefer Exceiptions to returning error codes" in Clean code book...
 // By using exceptions and cases not if statements, it makes the code more readable ...

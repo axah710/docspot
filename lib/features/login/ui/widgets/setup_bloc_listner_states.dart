@@ -1,7 +1,7 @@
-import 'package:docspot/core/helpers/extinsions.dart';
-import 'package:docspot/core/routing/routes.dart';
-import 'package:docspot/core/theming/app_colors.dart';
-import 'package:docspot/core/theming/app_fonts.dart';
+import '../../../../core/helpers/extinsions.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_fonts.dart';
 import 'package:flutter/material.dart';
 
 void setupSuccessState(BuildContext context) {
